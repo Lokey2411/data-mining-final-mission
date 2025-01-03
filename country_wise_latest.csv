@@ -1,4 +1,4 @@
-Unnamed: 0,Country/Region,Confirmed,Deaths,Recovered,New cases,New deaths,New recovered,1 week % increase,WHO Region
+Index,Country/Region,Confirmed,Deaths,Recovered,New cases,New deaths,New recovered,1 week % increase,WHO Region
 0,Afghanistan,36263,1269,25198,106,10,18,2.07,Eastern Mediterranean
 1,Albania,4880,144,2745,117,6,63,17.0,Europe
 2,Algeria,27973,1163,18837,616,8,749,18.07,Africa
