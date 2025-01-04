@@ -60,12 +60,13 @@ if len(noise_points) > 0:
 plt.figure(figsize=(8, 6))
 
 # Vẽ các cụm
+LABELS = "Mức độ nguy hiểm số"
 for cluster_id in unique_clusters:
     cluster_points = X[labels == cluster_id]
     plt.scatter(
         cluster_points[:, 0],
         cluster_points[:, 1],
-        label=f"Cluster {cluster_id}",
+        label=f"Mức độ nguy hiểm số {cluster_id}",
         color=colors_map[cluster_id],
         alpha=0.6,
     )
@@ -76,7 +77,7 @@ plt.scatter(
     X[labels == -1, 1],
     c="black",
     marker="+",
-    label="Noise",
+    label="Nhiễu",
 )
 
 plt.xlabel("Confirmed")
