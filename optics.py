@@ -66,7 +66,7 @@ for cluster_id in unique_clusters:
     plt.scatter(
         cluster_points[:, 0],
         cluster_points[:, 1],
-        label=f"Mức độ nguy hiểm số {cluster_id}",
+        label=f"{LABELS} {cluster_id}",
         color=colors_map[cluster_id],
         alpha=0.6,
     )
