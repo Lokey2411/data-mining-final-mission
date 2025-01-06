@@ -59,6 +59,23 @@ if len(noise_points) > 0:
 # Vẽ biểu đồ clustering
 plt.figure(figsize=(8, 6))
 
+# In ra các điểm và cụm tương ứng bao gồm Country/Region
+countries = data["Country/Region"].values  # Lấy danh sách các quốc gia
+
+clustered_points = {}
+for cluster_id in unique_clusters:
+    cluster_points_indices = np.where(labels == cluster_id)[0]
+    clustered_points[cluster_id] = cluster_points_indices
+
+# Hiển thị thông tin cụm kèm quốc gia
+for cluster_id, indices in clustered_points.items():
+    print(f"Cluster {cluster_id} (Mức độ nguy hiểm):")
+    for idx in indices:
+        country = countries[idx]
+        confirmed, deaths = X[idx]
+        print(f"  Country/Region: {country}, Confirmed: {confirmed}, Deaths: {deaths}")
+    print()
+
 # Vẽ các cụm
 LABELS = "Mức độ nguy hiểm số"
 for cluster_id in unique_clusters:
