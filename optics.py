@@ -69,7 +69,7 @@ for cluster_id in unique_clusters:
 
 # Hiển thị thông tin cụm kèm quốc gia
 for cluster_id, indices in clustered_points.items():
-    print(f"Cluster {cluster_id} (Mức độ nguy hiểm):")
+    print(f"Mức độ nguy hiểm số {cluster_id} :")
     for idx in indices:
         country = countries[idx]
         confirmed, deaths = X[idx]
